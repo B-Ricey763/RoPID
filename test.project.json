@@ -1,0 +1,26 @@
+{
+  "name": "PID-Controller",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "PIDController": {
+        "$path": "default.project.json"
+      }
+    },
+
+    "ServerScriptService": {
+      "Server": {
+        "$path": "tests/server"
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "tests/client"
+        }
+      }
+    }
+  }
+}
