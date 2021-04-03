@@ -18,9 +18,7 @@ jobs:
           version: "^1.0.0"
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build project
-        run: |
-          cd src
-          zip -r pid.zip
+        run: zip -r pid.zip src/PIDController
       - name: Build Model file
         run: rojo build -o PIDController.rbxmx
       - name: Publish to Roblox
@@ -33,5 +31,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: "PID Controller"
+          name: "pid.zip"
           files: "./src/pid.zip"
