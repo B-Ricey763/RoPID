@@ -1,0 +1,77 @@
+[selene]
+base = "lua51"
+
+[[json.toString.args]]
+type = "any"
+
+[[remodel.createDirAll.args]]
+type = "string"
+
+[[remodel.getRawProperty.args]]
+type = { display = "Instance" }
+
+[[remodel.getRawProperty.args]]
+type = "string"
+
+[[remodel.isDir.args]]
+type = "string"
+
+[[remodel.readPlaceAsset.args]]
+type = "string"
+
+[[remodel.readModelAsset.args]]
+type = "string"
+
+[[remodel.readPlaceFile.args]]
+type = "string"
+
+[[remodel.readModelFile.args]]
+type = "string"
+
+[[remodel.setRawProperty.args]]
+type = { display = "Instance" }
+
+[[remodel.setRawProperty.args]]
+type = "string"
+
+[[remodel.setRawProperty.args]]
+type = "string"
+
+[[remodel.setRawProperty.args]]
+type = "any"
+
+[[remodel.writeExistingPlaceAsset.args]]
+type = { display = "Instance" }
+
+[[remodel.writeExistingModelAsset.args]]
+type = "any"
+
+[[remodel.writeExistingPlaceAsset.args]]
+type = "string"
+
+[[remodel.writeExistingModelAsset.args]]
+type = "string"
+
+[[remodel.writeModelFile.args]]
+type = { display = "Instance" }
+
+[[remodel.writeModelFile.args]]
+type = "string"
+
+[[remodel.writeFile.args]]
+type = "string"
+
+[[remodel.writeFile.args]]
+type = "string"
+
+[[Instance.new.args]]
+type = "string"
+
+[[Vector3int16.new.args]]
+type = "number"
+
+[[Vector3int16.new.args]]
+type = "number"
+
+[[Vector3int16.new.args]]
+type = "number"

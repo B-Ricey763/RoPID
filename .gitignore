@@ -1,6 +1,13 @@
 # Project place file
-/build.rbxlx
+/*.rbxlx
+/*.rbxmx
+
+# Random pictures
+assets
 
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
+
+# Auto generated selen file
+roblox.toml
