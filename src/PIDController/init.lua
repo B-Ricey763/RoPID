@@ -1,8 +1,6 @@
 -- PIDController
 -- April 4, 2021
 
---TEST UPLOAD 2
-
 --[[
   A class for managing PID, with gains and bounds
   Supported types: number, Vector3 (make sure to use the appropriate constructor)
@@ -21,7 +19,7 @@
 local PIDController = {}
 PIDController.__index = PIDController
 
-PIDController.Tuner = script.Tuner
+PIDController.Util = script.Util
 
 --[[
   Private base constructor that can take numerous types
@@ -47,6 +45,10 @@ function PIDController.new(kP: number, kI: number, kD: number, min: number, max:
     _integral = 0,
     _pastErr = 0,
   }, PIDController)
+end
+
+function PIDController.Is(obj)
+  return typeof(obj) == "table" and getmetatable(obj) == PIDController
 end
 
 --[[

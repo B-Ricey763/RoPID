@@ -12,20 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install foreman
-        uses: Roblox/setup-foreman@v1
-        with:
-          version: "^1.0.0"
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build project
         run: zip -r pid.zip src/PIDController
-      - name: Build Model file
-        run: rojo build -o PIDController.rbxmx
-      - name: Publish to Roblox
-        shell: bash
-        env:
-          REMODEL_AUTH: ${{ secrets.RBX_AUTH }}
-        run: remodel run publish
       - name: Release
         uses: softprops/action-gh-release@v1
         env:
@@ -33,3 +21,15 @@ jobs:
         with:
           name: "pid.zip"
           files: "./src/pid.zip"
+      - name: Install foreman
+        uses: Roblox/setup-foreman@v1
+        with:
+          version: "^1.0.0"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Model file
+        run: rojo build -o PIDController.rbxmx
+      - name: Publish to Roblox
+        shell: bash
+        env:
+          REMODEL_AUTH: ${{ secrets.RBX_AUTH }}
+        run: remodel run publish

@@ -2,23 +2,87 @@
   "name": "PID-Controller",
   "tree": {
     "$className": "DataModel",
-
     "ReplicatedStorage": {
       "PIDController": {
         "$path": "default.project.json"
       }
     },
-
     "ServerScriptService": {
       "Server": {
         "$path": "tests/server"
       }
     },
-
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
           "$path": "tests/client"
+        }
+      }
+    },
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      "Baseplate": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.38823,
+            0.37254,
+            0.38823
+          ],
+          "Locked": true,
+          "Position": [
+            0,
+            -10,
+            0
+          ],
+          "Size": [
+            512,
+            20,
+            512
+          ]
+        }
+      },
+      "Part": {
+        "$className": "Part",
+        "$properties": {
+          "Size": [
+            5,
+            5,
+            5
+          ],
+          "Position": [
+            0,
+            5,
+            0
+          ],
+          "Shape": "Ball",
+          "TopSurface": "Smooth",
+          "BottomSurface": "Smooth"
+        }
+      },
+      "Goal": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "CanCollide": false,
+          "Color": [
+            31,
+            128,
+            29
+          ],
+          "Size": [
+            2,
+            2,
+            2
+          ],
+          "Position": [
+            0,
+            10,
+            0
+          ]
         }
       }
     }
