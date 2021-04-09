@@ -9,9 +9,9 @@
 ]]
 
 local RunService = game:GetService("RunService")
-local PID = require(game:GetService("ReplicatedStorage").PIDController)
-local Tuner = require(PID.Util.Tuner)
-local PIDVec3 = require(PID.Util.Vec3)
+local RoPID = require(game:GetService("ReplicatedStorage").RoPID)
+local Tuner = require(RoPID.Util.Tuner)
+local PIDVec3 = require(RoPID.Util.Vec3)
 local part: Part = workspace.Part
 local goal = workspace.Goal
 

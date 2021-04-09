@@ -1,5 +1,4 @@
-local PIDController = require(script.Parent.Parent)
-local Vec3 = require(script.Parent.Vec3)
+local RoPID = require(script.Parent.Parent)
 
 --[[
   Used for debugging your PID Controllers.
@@ -21,7 +20,7 @@ end
 
 function Tuner:_init(controller)
   local folder: Folder = self._instance
-  if getmetatable(controller) == PIDController then
+  if RoPID.Is(controller) then
     for name, gain in pairs(controller.Gains) do
       folder:SetAttribute(name, gain)
       folder:GetAttributeChangedSignal(name):Connect(function()
@@ -35,10 +34,8 @@ function Tuner:_init(controller)
         controller.Bounds[name] = folder:GetAttribute(name)
       end)
     end
-  elseif getmetatable(controller) == Vec3 then
-    self:_init(controller.X)
-    self:_init(controller.Y)
-    self:_init(controller.Z)
+  else 
+    
   end
 end
 

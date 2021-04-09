@@ -16,10 +16,10 @@
   
 ]]
 
-local PIDController = {}
-PIDController.__index = PIDController
+local RoPID = {}
+RoPID.__index = RoPID
 
-PIDController.Util = script.Util
+RoPID.Util = script.Util
 
 --[[
   Private base constructor that can take numerous types
@@ -31,7 +31,7 @@ PIDController.Util = script.Util
     min: minimum value
     max: maximum value
 ]]
-function PIDController.new(kP: number, kI: number, kD: number, min: number, max: number)
+function RoPID.new(kP: number, kI: number, kD: number, min: number, max: number)
   return setmetatable({
     Gains = {
       kP = kP,
@@ -44,11 +44,12 @@ function PIDController.new(kP: number, kI: number, kD: number, min: number, max:
     },
     _integral = 0,
     _pastErr = 0,
-  }, PIDController)
+  }, RoPID)
 end
 
-function PIDController.Is(obj)
-  return typeof(obj) == "table" and getmetatable(obj) == PIDController
+
+function RoPID.Is(obj)
+  return typeof(obj) == "table" and getmetatable(obj) == RoPID
 end
 
 --[[
@@ -58,7 +59,7 @@ end
     setPoint: the desired value
     processValue: the measured value
 ]]
-function PIDController:Calculate(setPoint: number, processValue: number, deltaTime: number)
+function RoPID:Calculate(setPoint: number, processValue: number, deltaTime: number)
   local err = setPoint - processValue
 	local pOut = self.Gains.kP * err
 	local iOut = 0
@@ -76,8 +77,8 @@ function PIDController:Calculate(setPoint: number, processValue: number, deltaTi
   return output
 end
 
-function PIDController:_shouldClamp(before, after, err)
+function RoPID:_shouldClamp(before, after, err)
   return before ~= after and math.sign(before) == math.sign(err)
 end
 
-return PIDController
+return RoPID

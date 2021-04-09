@@ -1,6 +1,6 @@
 {
-  "name": "PIDController",
+  "name": "RoPID",
   "tree": {
-      "$path": "src/PIDController"
+      "$path": "src/RoPID"
   }
 }
