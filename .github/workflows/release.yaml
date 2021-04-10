@@ -19,7 +19,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: "RoPID.zip"
           files: "./src/RoPID.zip"
       # - name: Install foreman
       #   uses: Roblox/setup-foreman@v1
