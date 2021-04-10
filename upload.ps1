@@ -1,3 +1,4 @@
-rojo build -o PIDController.rbxmx
+# Automatic upload workflow
+rojo build -o RoPID.rbxmx
 remodel run publish
-Remove-Item PIDController.rbxmx
+Remove-Item RoPID.rbxmx
