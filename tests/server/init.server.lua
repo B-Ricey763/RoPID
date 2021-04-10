@@ -29,9 +29,9 @@ local kP = part.AssemblyMass * workspace.Gravity + 100
 -- The PIDVec3 is a wrapper class with 3 PID controllers, one to each axis: X, Y, Z
 local controller = PIDVec3.new(kP, 5000, 2500, -80000, 80000)
 -- Go to workspace.BallTuner and change the attributes to tune your PID Controller
-local tuner = Tuner.new("BallTuner", controller)
+Tuner.new("BallTuner", controller)
 -- Update the vf every frame with the new PID output
-RunService.Stepped:Connect(function(et, dt)
+RunService.Stepped:Connect(function(_, dt)
   local out = controller:Calculate(goal.Position, part.Position, dt)
   vf.Force = out
 end)

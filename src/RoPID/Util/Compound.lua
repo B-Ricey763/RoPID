@@ -1,21 +1,15 @@
 local RoPID = require(script.Parent.Parent)
-
-local Compound = {}
-Compound.__index = Compound
-
-function Compound.new(num, ...)
-  local self = setmetatable({
-    _list = table.create(num, {}),
-    Num = num,
-  }, Compound)
+--[[
+  Creates an array of PID controllers.
+  Useful when using the same gains but for different
+  set points and process values.
+  Used by Vec2 and Vec3 util modules.
+  Not really sure if it's needed.
+]]
+return function (num, ...)
+  local comp = table.create(num, {})
   for i = 1, num do
-    self._list[i] = RoPID.new(...)
+    comp[i] = RoPID.new(...)
   end
-  return self
+  return comp
 end
-
-function Compound.Is(obj)
-  return typeof(obj) == "table" and getmetatable(obj) == Compound
-end
-
-return Compound
