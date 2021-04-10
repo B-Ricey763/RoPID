@@ -1,2 +1,3 @@
-<img align="right" src="logo/logo.png" style="margin-left: 15px">
+<img align="right" src="logo/Logo.png" style="margin-left: 15px">
+
 # RoPID
