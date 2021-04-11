@@ -16,6 +16,12 @@ local function createBall()
   ball.Position = Vector3.new(0, 5, 0)
   ball.CanCollide = true
   ball.Parent = workspace
+  --------------------------------------------------------
+  -- NOTE: IF YOU ARE HAVING TROUBLE WITH PLAYER INTERACTIONS
+  -- WITH PID CONTROLLED OBJECTS, SET THE OWNERSHIP TO THE 
+  -- SERVER (aka, nil)
+  --------------------------------------------------------
+  ball:SetNetworkOwner(nil)
 
   -- Should be using VectorForce but too lazy to make
   local bodyForce =  Instance.new("BodyForce")
