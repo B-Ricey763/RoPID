@@ -20,15 +20,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: "./src/RoPID.zip"
-      # - name: Install foreman
-      #   uses: Roblox/setup-foreman@v1
-      #   with:
-      #     version: "^1.0.0"
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      # - name: Build Model file
-      #   run: rojo build -o PIDController.rbxmx
-      # - name: Publish to Roblox
-      #   shell: bash
-      #   env:
-      #     REMODEL_AUTH: ${{ secrets.RBX_AUTH }}
-      #   run: remodel run publish
+      - name: Install foreman
+        uses: Roblox/setup-foreman@v1
+        with:
+          version: "^1.0.0"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Model file
+        run: rojo build -o RoPID.rbxmx
+      - name: Publish to Roblox
+        shell: bash
+        env:
+          REMODEL_AUTH: ${{ secrets.RBX_AUTH }}
+        run: remodel run publish
