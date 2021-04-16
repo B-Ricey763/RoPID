@@ -1,5 +1,5 @@
-# RoPID
-<img  align="right"  src="logo/Logo.png"  style="margin-left: 15px">
+![Logo](logo/Logo.png)
+
 
 A PID (Proportional, Integral, Derivative) Controller is a type of closed feedback loop that uses an algorithm to get an output that gets to the desired position quickly, doesn't overshoot, and can resist transient errors.
 
