@@ -13,14 +13,14 @@
       > Same as RoPID, but uses Vector3s for sp and pv
 ]]
 
-local Compound = require(script.Parent.Compound)
+local RoPID = require(script.Parent.Parent)
 
 local Vec3 = {}
 Vec3.__index = Vec3
 
 function Vec3.new(...)
   return setmetatable({
-    _comp = Compound(3, ...)
+    _comp = RoPID.Compound(3, ...)
   }, Vec3)
 end
 

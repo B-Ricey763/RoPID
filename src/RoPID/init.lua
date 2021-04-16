@@ -19,6 +19,10 @@
 
     RoPID.Is(obj: any): boolean
 
+    RoPID.Compound(num: number, ...: number): RoPID[]
+      > Creates a bunch of PID controllers at once. 
+        WARNING: No support for this in Tuner
+
     controller = RoPID.new(kP: number, kI: number, kD: number, min: number?, max: number?)
       > kP, kI, and kD are the gains. If you want to turn one of them off, just 
         pass in zero. Notice min and max are optional.
@@ -65,6 +69,13 @@ function RoPID.new(kP: number, kI: number, kD: number, min: number?, max: number
   }, RoPID)
 end
 
+function RoPID.Compound(num, ...)
+  local comp = table.create(num, {})
+  for i = 1, num do
+    comp[i] = RoPID.new(...)
+  end
+  return comp
+end
 
 function RoPID.Is(obj: any): boolean
   return typeof(obj) == "table" and getmetatable(obj) == RoPID
