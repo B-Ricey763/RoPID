@@ -14,9 +14,11 @@ Ball rolling with a constant velocity (uses base RoPID module)
 
 ![Rolling Ball with P Controller](https://media.giphy.com/media/fZro2MsFatkNbUwo28/giphy.gif)
 
+
 GUI frame following mouse, but with dynamic movement (uses Vec2 Util module)
 
 ![Gui Following Mouse](https://media.giphy.com/media/YPG10EZf79qh4J9dAF/giphy.gif)
+
 
 Ball following goal part (uses Vec3 util module)
 
