@@ -5,7 +5,7 @@
   to write them down before you close a session.
 
   API:
-    tuner = Tuner.new(name: string, controller: RoPID | Vec3 | Vec2, parent: Instance)
+    tuner = Tuner.new(name: string, controller: RoPID | Vec3 | Vec2, parent: Instance?)
       > Creates a new folder in parent (or workspace, if parent is nil) with attributes
         denoting each gain (kP, kI, kD) and bound (min, max). When you change the attribute
         values, the gains and bounds of the controller change as well.

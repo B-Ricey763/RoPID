@@ -1,5 +1,5 @@
 --[[
-  Basically a wrapper class for a Compound with 2 values. See RoPID.Util.Compound for details.
+  Basically a wrapper class for a Compound with 2 values. See RoPID.Compound() for details.
   Vec2 is also tunable, but each axis is tuned the same. Useful for GUI
   applications, or anything in 2D space.
 

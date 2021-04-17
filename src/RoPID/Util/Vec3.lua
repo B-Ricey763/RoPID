@@ -1,7 +1,7 @@
 --[[
-  Basically a wrapper class for a Compound with 2 values. See RoPID.Util.Compound for details.
-  Vec3 is also tunable, but each axis is tuned the same. Useful for GUI
-  applications, or anything in 2D space.
+  Basically a wrapper class for a Compound with 2 values. See RoPID.Compound() for details.
+  Vec3 is also tunable, but each axis is tuned the same. Useful for parts or 
+  anything in 3D space.
 
   API:
     Vec3.Is(obj: any): boolean
