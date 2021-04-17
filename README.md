@@ -1,16 +1,15 @@
-![Logo](logo/Logo.png)
-
+<img align="center" src="logo/Logo.png" width="512px">
 
 A PID (Proportional, Integral, Derivative) Controller is a type of closed feedback loop that uses an algorithm to get an output that gets to the desired position quickly, doesn't overshoot, and can resist transient errors.
 
 ![PID algorithm picture](https://upload.wikimedia.org/wikipedia/commons/4/43/PID_en.svg)
 
-PID was created for applications such as heating (to get to a desired temperature), robotics (getting a motor to a specific velocity), and cruise control for a car. The **set point** of a PID controller is the value you want to achieve, and the **process value** is the value read from the environment. **PID gains** are the constant values to tweak the reactions of the system (kP, kI, and kD). For a more in depth explanation of PID, see [this](https://youtube.com/playlist?list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y) YouTube series. 
+PID was created for applications such as heating (to get to a desired temperature), robotics (getting a motor to a specific velocity), and cruise control for a car. The **set point** of a PID controller is the value you want to achieve, and the **process value** is the value read from the environment. **PID gains** are the constant values to tweak the reactions of the system (kP, kI, and kD). For a more in depth explanation of PID, see [this YouTube series](https://youtube.com/playlist?list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y). 
 
 RoPID implements the PID algorithm (plus a few extra features) into Roblox! It can be used for custom BodyGyros, BodyPositions, and BodyVelocities, as well as, you guessed it, cruise control for your cars or even as dynamic GUI animations. 
 
 ## Examples
-*Each of these can be found in  the [Examples](examples) Folder of the repo.*
+*The script for each of these can be found in  the [Examples Folder](examples) of the repo.*
 
 Ball rolling with a constant velocity (uses base RoPID module)
 
