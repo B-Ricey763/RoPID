@@ -10,6 +10,8 @@ PID was created for applications such as heating (to get to a desired temperatur
 RoPID implements the PID algorithm (plus a few extra features) into Roblox! It can be used for custom BodyGyros, BodyPositions, and BodyVelocities, as well as, you guessed it, cruise control for your cars or even as dynamic GUI animations. 
 
 ## Examples
+*Each of these can be found in  the [Examples](examples) Folder of the repo.*
+
 Ball rolling with a constant velocity (uses base RoPID module)
 
 ![Rolling Ball with P Controller](https://media.giphy.com/media/fZro2MsFatkNbUwo28/giphy.gif)
